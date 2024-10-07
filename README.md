@@ -41,3 +41,7 @@ Cell 객체 생성으로 인한 리펙토링
 ```
 
 `Cell` 의 4가지 개념으로 지금 `Cell`의 상태를 `getSign()`으로 그려줌
+    
+2024.10.08  
+SRP 지키기 위해 InputHandler, OutputHandler, GameBoard 객체로 리팩토링  
+OCP 지키기 위해 GameLevel interface를 통해 MineSweeper 생성 
