@@ -44,4 +44,5 @@ Cell 객체 생성으로 인한 리펙토링
     
 2024.10.08  
 SRP 지키기 위해 InputHandler, OutputHandler, GameBoard 객체로 리팩토링  
-OCP 지키기 위해 GameLevel interface를 통해 MineSweeper 생성 
+OCP 지키기 위해 GameLevel interface를 통해 MineSweeper 생성
+LSP 를 지키면서 Cell을 추상클래스로 Refactoring
