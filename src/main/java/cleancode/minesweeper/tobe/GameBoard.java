@@ -67,6 +67,11 @@ public class GameBoard {
             || cellPosition.isColIndexMoreThanOrEqual(colSize);
     }
 
+    public CellSnapshot getSnapshot(CellPosition cellPosition) {
+        Cell cell = findCell(cellPosition);
+        return cell.getSnapshot();
+    }
+
     public void initializeGame() {
         CellPositions cellPositions = CellPositions.from(board);
 
@@ -100,21 +105,16 @@ public class GameBoard {
             updateCellAt(position, new EmptyCell());
         }
     }
-
     private void updateCellAt(CellPosition position, Cell cell) {
         board[position.getRowIndex()][position.getColIndex()] = cell;
     }
 //    public void temp(Cell2 cell) {
 //        if (cell instanceof NumberCell) { // LSP 위반하여 생기는 부가적인 type check
 //            cell.updateNearbyLandMineCount(0);
+
 //        }
 
 //    }
-
-    public String getSign(CellPosition cellPosition) {
-        Cell cell = findCell(cellPosition);
-        return cell.getSign();
-    }
 
     private Cell findCell(CellPosition cellPosition) {
         return board[cellPosition.getRowIndex()][cellPosition.getColIndex()];
